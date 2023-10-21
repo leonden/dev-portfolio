@@ -1,0 +1,14 @@
+@import "../../../../global/variables.scss";
+@import "../../../../global/mixins";
+
+article {
+  background-color: white;
+
+  h1 {
+    background-color: $primary-dark-shade;
+  }
+
+  p {
+    background-color: $primary-dark;
+  }
+}

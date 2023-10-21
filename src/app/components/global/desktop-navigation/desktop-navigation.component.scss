@@ -1,0 +1,28 @@
+@import "../../../../global/variables.scss";
+@import "../../../../global/mixins";
+
+nav {
+  @include flex-space-between;
+  width: 60%;
+  height: 5vh;
+  margin: 1rem auto 0 auto;
+  border-radius: 100px;
+  background-color: #00000050;
+  backdrop-filter: blur(5px);
+
+  svg {
+    margin-left: 40px;
+    cursor: pointer;
+  }
+
+  ul {
+    height: 100%;
+    width: calc(100% - 40px);
+    @include flex-space-around;
+    li {
+      a {
+        color: white;
+      }
+    }
+  }
+}
