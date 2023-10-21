@@ -11,7 +11,15 @@ import { DesktopNavigationComponent } from './components/global/desktop-navigati
 import { CardComponent } from './components/global/card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ConnectComponent, MobileNavigationComponent, DesktopNavigationComponent, CardComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ConnectComponent,
+    MobileNavigationComponent,
+    DesktopNavigationComponent,
+    CardComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
