@@ -11,6 +11,7 @@ export class EffectService {
 
   /**
    *
+   * @requires `data-value` In the template, use `data-value` and the value of the element.
    * @param e The `MouseEvent` to to trigger the effect.
    */
   anchorHover(e: MouseEvent) {
