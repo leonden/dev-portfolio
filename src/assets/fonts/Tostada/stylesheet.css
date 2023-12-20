@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Tostada';
+    src: url('Tostada-Italic.woff2') format('woff2'),
+        url('Tostada-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tostada';
+    src: url('Tostada.woff2') format('woff2'),
+        url('Tostada.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
