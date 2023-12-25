@@ -10,6 +10,9 @@ export default {
         tostada: ["Tostada", "serif"],
         wagon: ["Wagon", "serif"],
       },
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
     },
     plugins: [],
   },
