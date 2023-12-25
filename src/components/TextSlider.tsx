@@ -20,7 +20,7 @@ function ParallaxText({ children, baseVelocity = 50 }: ParallaxProps) {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 80,
+    damping: 100,
     stiffness: 100,
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
@@ -50,6 +50,11 @@ function ParallaxText({ children, baseVelocity = 50 }: ParallaxProps) {
         className="font-rota uppercase text-6xl flex whitespace-no-wrap flex-no-wrap"
         style={{ x }}
       >
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
