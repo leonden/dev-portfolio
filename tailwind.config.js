@@ -8,6 +8,7 @@ export default {
         mentra: ["Mentra", "sans-serif"],
         symmetrika: ["Symmetrika", "sans-serif"],
         tostada: ["Tostada", "serif"],
+        wagon: ["Wagon", "serif"],
       },
     },
     plugins: [],
