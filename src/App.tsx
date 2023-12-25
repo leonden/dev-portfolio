@@ -1,17 +1,16 @@
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import ProgressBar from "./components/ProgressBar";
-import TextSlider from "./components/TextSlider";
+import Page from "./pages/Page";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoPage from "./pages/NoPage";
 
 function App() {
   return (
     <>
-      <Home />
-      <TextSlider />
-      <About />
-      <Contact />
-      <ProgressBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Page />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
