@@ -3,6 +3,7 @@ import About from "./About";
 import Contact from "./Contact";
 import ProgressBar from "../components/ProgressBar";
 import TextSlider from "../components/TextSlider";
+import Navigation from "../components/Navigation";
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
       <TextSlider />
       <About />
       <Contact />
+      <Navigation />
       <ProgressBar />
     </>
   );
