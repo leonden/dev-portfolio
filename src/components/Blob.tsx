@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Blob() {
+export default function Blob() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -32,5 +32,3 @@ function Blob() {
     </>
   );
 }
-
-export default Blob;

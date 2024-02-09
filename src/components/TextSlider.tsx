@@ -66,7 +66,7 @@ function ParallaxText({ children, baseVelocity = 50 }: ParallaxProps) {
   );
 }
 
-function TextSlider() {
+export default function TextSlider() {
   return (
     <div className="my-20">
       <ParallaxText baseVelocity={-2.5}>DEVELOPER</ParallaxText>
@@ -74,5 +74,3 @@ function TextSlider() {
     </div>
   );
 }
-
-export default TextSlider;

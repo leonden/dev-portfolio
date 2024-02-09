@@ -4,7 +4,7 @@ import Contact from "./Contact";
 import ProgressBar from "../components/ProgressBar";
 import TextSlider from "../components/TextSlider";
 
-function Page() {
+export default function Page() {
   return (
     <>
       <Home />
@@ -15,5 +15,3 @@ function Page() {
     </>
   );
 }
-
-export default Page;

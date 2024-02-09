@@ -2,7 +2,7 @@ import Page from "./pages/Page";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage";
 
-function App() {
+export default function App() {
   return (
     <>
       <BrowserRouter>
@@ -14,5 +14,3 @@ function App() {
     </>
   );
 }
-
-export default App;

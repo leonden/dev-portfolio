@@ -1,4 +1,4 @@
-function Home() {
+export default function Home() {
   return (
     <>
       <section id="home" className="w-screen h-screen p-10 z-10">
@@ -9,5 +9,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

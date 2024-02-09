@@ -1,6 +1,6 @@
 import Blob from "../components/Blob";
 
-function NoPage() {
+export default function NoPage() {
   return (
     <>
       <div
@@ -48,5 +48,3 @@ function NoPage() {
     </>
   );
 }
-
-export default NoPage;

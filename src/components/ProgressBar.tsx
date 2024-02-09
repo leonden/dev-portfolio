@@ -1,6 +1,6 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 
-function ProgressBar() {
+export default function ProgressBar() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -17,5 +17,3 @@ function ProgressBar() {
     </>
   );
 }
-
-export default ProgressBar;

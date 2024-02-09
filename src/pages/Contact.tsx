@@ -1,4 +1,4 @@
-function Contact() {
+export default function Contact() {
   return (
     <>
       <section id="contact" className="w-screen h-screen z-10">
@@ -7,5 +7,3 @@ function Contact() {
     </>
   );
 }
-
-export default Contact;
