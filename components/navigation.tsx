@@ -11,11 +11,13 @@ import React from "react"
 export default function Navigation() {
     return (
         <div className="w-full flex justify-center">
-            <nav className="fixed bottom-5">
-                <Menubar>
+            <nav className="fixed bottom-5 w-4/5">
+                <Menubar className="w-full justify-between p-0">
                     <MenubarMenu>
                         <MenubarTrigger>
-                            <Link href={"#home"}>Home</Link>
+                            <Link href={"#home"} className="text-lg">
+                                Home
+                            </Link>
                         </MenubarTrigger>
                     </MenubarMenu>
                     <MenubarMenu>
@@ -23,7 +25,12 @@ export default function Navigation() {
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <Link href={"#about"}>About</Link>
+                                        <Link
+                                            href={"#about"}
+                                            className="text-lg"
+                                        >
+                                            About
+                                        </Link>
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         <p>Who am I</p>
@@ -37,7 +44,12 @@ export default function Navigation() {
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <Link href={"#work"}>Work</Link>
+                                        <Link
+                                            href={"#work"}
+                                            className="text-lg"
+                                        >
+                                            Work
+                                        </Link>
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         <p>What do I do</p>
@@ -51,7 +63,12 @@ export default function Navigation() {
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <Link href={"#contact"}>Contact</Link>
+                                        <Link
+                                            href={"#contact"}
+                                            className="text-lg"
+                                        >
+                                            Contact
+                                        </Link>
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         <p>How to reach me</p>
