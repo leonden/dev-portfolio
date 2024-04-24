@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import React from "react"
+import content from "../content/en.json"
 
 export const metadata: Metadata = {
-    title: "Leon",
-    description: "This is my portfolio",
+    title: content.title,
+    description: content.description,
 }
 
 export default function RootLayout({
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="font-rota">{children}</body>
+            <body className="font-rota scroll-smooth">{children}</body>
         </html>
     )
 }
