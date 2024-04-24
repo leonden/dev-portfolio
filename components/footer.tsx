@@ -21,36 +21,23 @@ export default function Footer() {
                 <li>{content.footer.slogan}</li>
                 <li>
                     <ul>
-                        <li>
-                            <Link
-                                href={content.socials.linkedin.url}
-                                className="flex"
-                            >
-                                <Image
-                                    src={content.socials.linkedin.icon}
-                                    width={32}
-                                    height={32}
-                                    alt={content.socials.linkedin.description}
-                                    className="mr-2"
-                                />
-                                <p>{content.socials.linkedin.description}</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={content.socials.github.url}
-                                className="flex"
-                            >
-                                <Image
-                                    src={content.socials.github.icon}
-                                    width={32}
-                                    height={32}
-                                    alt={content.socials.github.description}
-                                    className="mr-2"
-                                />
-                                <p>{content.socials.github.description}</p>
-                            </Link>
-                        </li>
+                        {Object.keys(content.socials).map((key: any) => (
+                            <li key={key}>
+                                <Link
+                                    href={content.socials[key].url}
+                                    className="flex"
+                                >
+                                    <Image
+                                        src={content.socials[key].icon}
+                                        width={32}
+                                        height={32}
+                                        alt={content.socials[key].title}
+                                        className="mr-2"
+                                    />
+                                    <p>{content.socials[key].title}</p>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </li>
             </ul>

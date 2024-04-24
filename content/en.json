@@ -6,18 +6,23 @@
         "addition": "Designed and developed by Leon Hochwimmer",
         "slogan": "Don't just tell, show."
     },
-    "socials": {
-        "linkedin": {
+    "socials": [
+        {
+            "title": "LinkedIn",
             "icon": "/media/linkedin.svg",
-            "description": "LinkedIn",
             "url": "https://www.linkedin.com/in/leon-hochwimmer/"
         },
-        "github": {
+        {
+            "title": "GitHub",
             "icon": "/media/github.svg",
-            "description": "GitHub",
             "url": "https://www.github.com/leonden/"
+        },
+        {
+            "title": "Email",
+            "icon": "/media/email.svg",
+            "url": "mailto:contact@leonhochwimmer.com"
         }
-    },
+    ],
     "pages": {
         "home": {
             "title": "Home",
