@@ -21,7 +21,12 @@ export default function Navigation() {
                         </MenubarTrigger>
                     </MenubarMenu>
                     <MenubarMenu>
-                        <MenubarTrigger>
+                        <MenubarTrigger className="lg:hidden">
+                            <Link href={"#about"} className="text-lg">
+                                About
+                            </Link>
+                        </MenubarTrigger>
+                        <MenubarTrigger className="hidden lg:block">
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
@@ -40,7 +45,12 @@ export default function Navigation() {
                         </MenubarTrigger>
                     </MenubarMenu>
                     <MenubarMenu>
-                        <MenubarTrigger>
+                        <MenubarTrigger className="lg:hidden">
+                            <Link href={"#work"} className="text-lg">
+                                Work
+                            </Link>
+                        </MenubarTrigger>
+                        <MenubarTrigger className="hidden lg:block">
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
@@ -59,7 +69,12 @@ export default function Navigation() {
                         </MenubarTrigger>
                     </MenubarMenu>
                     <MenubarMenu>
-                        <MenubarTrigger>
+                        <MenubarTrigger className="lg:hidden">
+                            <Link href={"#contact"} className="text-lg">
+                                Contact
+                            </Link>
+                        </MenubarTrigger>
+                        <MenubarTrigger className="hidden lg:block">
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
