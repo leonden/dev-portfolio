@@ -14,7 +14,7 @@ export default function Page() {
             <Work />
             <Contact />
             <Navigation />
-            {/* <ProgressBar /> */}
+            <ProgressBar />
         </main>
     )
 }
