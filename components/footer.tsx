@@ -13,7 +13,7 @@ export default function Footer() {
                 width={64}
                 height={64}
                 alt={"Footer Icon"}
-                className="absolute top-5 right-5"
+                className="absolute top-5 right-5 md:w-28 md:h-28"
             />
             <ul>
                 <li>{content.footer.copyright + currentYear}</li>
