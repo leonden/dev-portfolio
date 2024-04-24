@@ -1,6 +1,23 @@
 {
     "title": "Leon",
     "description": "Portfolio",
+    "footer": {
+        "copyright": "Copyright © ",
+        "addition": "Designed and developed by Leon Hochwimmer",
+        "slogan": "Don't just tell, show."
+    },
+    "socials": {
+        "linkedin": {
+            "icon": "/media/linkedin.svg",
+            "description": "LinkedIn",
+            "url": "https://www.linkedin.com/in/leon-hochwimmer/"
+        },
+        "github": {
+            "icon": "/media/github.svg",
+            "description": "GitHub",
+            "url": "https://www.github.com/leonden/"
+        }
+    },
     "pages": {
         "home": {
             "title": "Home",
