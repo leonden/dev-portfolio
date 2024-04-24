@@ -1,0 +1,21 @@
+{
+    "title": "Leon",
+    "pages": {
+        "home": {
+            "title": "Home",
+            "content": "Welcome to the home page!"
+        },
+        "about": {
+            "title": "About",
+            "content": "Welcome to the about page!"
+        },
+        "work": {
+            "title": "Work",
+            "content": "Welcome to the work page!"
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "Welcome to the contact page!"
+        }
+    }
+}
