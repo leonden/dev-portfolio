@@ -11,7 +11,12 @@ export default function Home() {
                 alt="Home Background"
                 className="object-cover w-full h-full lg:h-fit absolute z-0 select-none"
             />
-            <h1 className="z-10 text-[100px] font-tostada">Home</h1>
+            <div className="px-3 z-10">
+                <h1 className="text-6xl font-tostada max-w-4/5">
+                    The Art of Creating.
+                </h1>
+                <p>by Leon Hochwimmer</p>
+            </div>
         </section>
     )
 }

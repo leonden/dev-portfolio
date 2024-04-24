@@ -21,19 +21,39 @@
     "pages": {
         "home": {
             "title": "Home",
-            "content": "Welcome to the home page!"
+            "description": "Welcome to the home page!"
         },
         "about": {
             "title": "About",
-            "content": "Welcome to the about page!"
+            "description": "Welcome to the about page!"
         },
         "work": {
             "title": "Work",
-            "content": "Welcome to the work page!"
+            "description": "Welcome to the work page!",
+            "content": [
+                {
+                    "title": "Project 1",
+                    "description": "Description of project 1",
+                    "image": "/media/project1.jpg",
+                    "url": "https://www.google.com"
+                },
+                {
+                    "title": "Project 2",
+                    "description": "Description of project 2",
+                    "image": "/media/project2.jpg",
+                    "url": "https://www.google.com"
+                },
+                {
+                    "title": "Project 3",
+                    "description": "Description of project 3",
+                    "image": "/media/project3.jpg",
+                    "url": "https://www.google.com"
+                }
+            ]
         },
         "contact": {
             "title": "Contact",
-            "content": "Welcome to the contact page!"
+            "description": "Welcome to the contact page!"
         }
     }
 }
