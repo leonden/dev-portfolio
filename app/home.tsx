@@ -12,7 +12,7 @@ export default function Home() {
                 className="object-cover w-full h-full lg:h-fit absolute z-0 select-none"
             />
             <div className="px-3 z-10">
-                <h1 className="text-6xl font-tostada max-w-4/5">
+                <h1 className="text-6xl font-tostada max-w-4/5 2xl:text-8xl">
                     The Art of Creating.
                 </h1>
                 <p>by Leon Hochwimmer</p>
