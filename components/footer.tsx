@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer className="w-full min-h-[50vh] bg-black text-white relative p-5 flex flex-col overflow-hidden">
-            <p className="absolute text-9xl sm:text-[200px] lg:text-[300px] font-bold text-neutral-900 z-0">
+            <p className="absolute text-9xl sm:text-[200px] lg:text-[300px] 2xl:text-[350px] font-bold text-neutral-900 z-0">
                 {content.footer.slogan}
             </p>
             <Image
