@@ -7,7 +7,10 @@ export default function Footer() {
     const currentYear = new Date().getFullYear()
 
     return (
-        <footer className="w-full min-h-[50vh] bg-black text-white relative p-5 flex flex-col">
+        <footer className="w-full min-h-[50vh] bg-black text-white relative p-5 flex flex-col overflow-hidden">
+            <p className="absolute text-9xl sm:text-[200px] lg:text-[300px] font-bold text-neutral-900 z-0">
+                {content.footer.slogan}
+            </p>
             <Image
                 src={"/media/footer-icon.svg"}
                 width={64}
@@ -15,10 +18,9 @@ export default function Footer() {
                 alt={"Footer Icon"}
                 className="absolute top-5 right-5 md:w-28 md:h-28"
             />
-            <ul>
+            <ul className="z-10">
                 <li>{content.footer.copyright + currentYear}</li>
                 <li>{content.footer.addition}</li>
-                <li>{content.footer.slogan}</li>
                 <li>
                     <ul>
                         {Object.keys(content.socials).map((key: any) => (

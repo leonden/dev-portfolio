@@ -9,14 +9,18 @@ import ProgressBar from "../components/progressbar"
 
 export default function Page() {
     return (
-        <main>
+        <>
             <Home />
-            <About />
-            <Work />
-            <Contact />
+            <div className="max-w-[1200px] xl:mx-auto">
+                <main>
+                    <About />
+                    <Work />
+                    <Contact />
+                </main>
+                <Navigation />
+            </div>
             <Footer />
-            <Navigation />
             <ProgressBar />
-        </main>
+        </>
     )
 }
