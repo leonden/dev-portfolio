@@ -8,7 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import content from "@/content/en.json"
+import c from "@/content/en.json"
 
 export default function Work() {
     return (
@@ -16,7 +16,7 @@ export default function Work() {
             id="work"
             className="w-full h-screen flex flex-wrap gap-3 px-3"
         >
-            {content.pages.work.content.map((item, index) => (
+            {c.pages.work.content.map((item, index) => (
                 <Card key={index} className="w-[350px]">
                     <CardHeader>
                         <CardTitle>{item.title}</CardTitle>

@@ -28,6 +28,15 @@ export default function Contact() {
                         </strong>
                     </Link>
                 </p>
+                <ul>
+                    {c.socials.map((item, index) => (
+                        <li key={index}>
+                            <a href={item.url} className="text-4xl underline">
+                                {item.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </section>
     )
