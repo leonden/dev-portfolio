@@ -140,7 +140,7 @@ export default function Navigation() {
                     <motion.button
                         variants={fadeInVariant}
                         onClick={() => setNavOpen(false)}
-                        className="self-end bg-transparent text-lg text-black ml-0 mr-[45px] mt-[35px] mb-0 border-[none] hover:cursor-pointer"
+                        className="self-end bg-transparent text-lg text-black ml-0 mr-[45px] mt-[35px] py-1 px-3 mb-0 border-[none] hover:cursor-pointer"
                     >
                         close
                     </motion.button>
