@@ -1,78 +1,165 @@
 "use client"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import Link from "next/link"
 import React, { useState } from "react"
 
-export default function Navigation() {
-    const [isOpen, setIsOpen] = useState(false)
+const navItems = [
+    {
+        id: 0,
+        title: "home",
+        url: "#home",
+    },
+    {
+        id: 1,
+        title: "about",
+        url: "#about",
+    },
+    {
+        id: 2,
+        title: "work",
+        url: "#work",
+    },
+    {
+        id: 3,
+        title: "contact",
+        url: "#contact",
+    },
+]
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen)
+export default function Navigation() {
+    const [navOpen, setNavOpen] = useState(false)
+
+    const hideNavItemsVariant = {
+        opened: {
+            opacity: 0,
+            y: "-100%",
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut",
+            },
+        },
+        closed: {
+            opacity: 1,
+            y: "0%",
+            transition: {
+                delay: 1.1,
+                duration: 0.5,
+                ease: "easeInOut",
+            },
+        },
+    }
+
+    const mobileMenuVariant = {
+        opened: {
+            y: "0%",
+            transition: {
+                delay: 0.15,
+                duration: 1.1,
+                ease: [0.74, 0, 0.19, 1.02],
+            },
+        },
+        closed: {
+            y: "-100%",
+            transition: {
+                delay: 0.35,
+                duration: 0.63,
+                ease: [0.74, 0, 0.19, 1.02],
+            },
+        },
+    }
+
+    const fadeInVariant = {
+        opened: {
+            opacity: 1,
+            transition: {
+                delay: 1.2,
+            },
+        },
+        closed: { opacity: 0 },
+    }
+
+    const ulVariant = {
+        opened: {
+            transition: {
+                delayChildren: 1,
+                staggerChildren: 0.18,
+            },
+        },
+        closed: {
+            transition: {
+                staggerChildren: 0.06,
+                staggerDirection: -1,
+            },
+        },
+    }
+
+    const liVariant = {
+        opened: {
+            opacity: 1,
+            y: "0%",
+            transition: {
+                duration: 0.65,
+                ease: "easeOut",
+            },
+        },
+        closed: {
+            opacity: 0,
+            y: "100%",
+            transition: {
+                duration: 0.25,
+                ease: "easeInOut",
+            },
+        },
     }
 
     return (
-        <div className="w-full flex justify-center">
-            <div className="flex gap-2">
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 10,
-                    }}
-                    className="fixed top-5 right-5 z-50 bg-black p-2 rounded-full w-10 h-10"
-                    onClick={toggleMenu}
-                />
-            </div>
-            <AnimatePresence>
-                {isOpen && (
-                    <nav className="fixed top-20 right-5 text-right text-xl">
-                        <ul>
-                            <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5 }}
+        <>
+            <motion.button
+                variants={hideNavItemsVariant}
+                onClick={() => setNavOpen(true)}
+                className="text-lg hover:cursor-pointer fixed right-[45px] top-[35px] z-40 py-1 px-3 bg-white rounded-3xl shadow-md"
+            >
+                menu
+            </motion.button>
+            <motion.nav
+                initial="closed"
+                animate={navOpen ? "opened" : "closed"}
+                className="flex justify-between px-[45px] py-[35px] z-50 bg-white absolute"
+            >
+                <motion.div
+                    variants={mobileMenuVariant}
+                    className="fixed h-screen w-full flex flex-col items-center bg-white left-0 top-0 z-50"
+                >
+                    <motion.button
+                        variants={fadeInVariant}
+                        onClick={() => setNavOpen(false)}
+                        className="self-end bg-transparent text-lg text-black ml-0 mr-[45px] mt-[35px] mb-0 border-[none] hover:cursor-pointer"
+                    >
+                        close
+                    </motion.button>
+                    <motion.ul variants={ulVariant}>
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.id}
+                                href={item.url}
+                                onClick={() => setNavOpen(false)}
                             >
-                                <Link href={"#home"}>
-                                    <li className="p-1">Home</li>
-                                </Link>
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5, delay: 0.1 }}
-                            >
-                                <Link href={"#about"}>
-                                    <li className="p-1">About</li>
-                                </Link>
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                            >
-                                <Link href={"#work"}>
-                                    <li className="p-1">Work</li>
-                                </Link>
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5, delay: 0.3 }}
-                            >
-                                <Link href={"#contact"}>
-                                    <li className="p-1">Contact</li>
-                                </Link>
-                            </motion.div>
-                        </ul>
-                    </nav>
-                )}
-            </AnimatePresence>
-        </div>
+                                <motion.li
+                                    whileTap={{ scale: 0.95 }}
+                                    className="overflow-y-hidden select-none mx-0 my-5 hover:italic hover:cursor-pointer"
+                                >
+                                    <motion.div
+                                        variants={liVariant}
+                                        className="text-center capitalize text-[34px]"
+                                    >
+                                        {item.title}
+                                    </motion.div>
+                                </motion.li>
+                            </Link>
+                        ))}
+                    </motion.ul>
+                </motion.div>
+            </motion.nav>
+        </>
     )
 }
