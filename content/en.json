@@ -35,7 +35,7 @@
         "work": {
             "title": "Work",
             "description": "Welcome to the work page!",
-            "content": [
+            "projects": [
                 {
                     "title": "Project 1",
                     "description": "Description of project 1",

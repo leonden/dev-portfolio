@@ -10,6 +10,7 @@ import ProgressBar from "../components/progressbar"
 export default function Page() {
     return (
         <>
+            <Navigation />
             <Home />
             <div className="max-w-[1200px] xl:mx-auto">
                 <main>
@@ -17,7 +18,6 @@ export default function Page() {
                     <Work />
                     <Contact />
                 </main>
-                <Navigation />
             </div>
             <Footer />
             <ProgressBar />

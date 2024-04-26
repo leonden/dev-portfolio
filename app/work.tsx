@@ -16,7 +16,7 @@ export default function Work() {
             id="work"
             className="w-full h-screen flex flex-wrap gap-3 px-3"
         >
-            {c.pages.work.content.map((item, index) => (
+            {c.pages.work.projects.map((item, index) => (
                 <Card key={index} className="w-[350px]">
                     <CardHeader>
                         <CardTitle>{item.title}</CardTitle>
