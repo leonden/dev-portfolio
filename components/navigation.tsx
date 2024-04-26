@@ -115,6 +115,13 @@ export default function Navigation() {
     return (
         <>
             <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 10,
+                }}
                 variants={hideNavItemsVariant}
                 onClick={() => setNavOpen(true)}
                 className="text-lg hover:cursor-pointer fixed right-[45px] top-[35px] z-40 py-1 px-3 bg-white rounded-3xl shadow-md"
@@ -128,7 +135,7 @@ export default function Navigation() {
             >
                 <motion.div
                     variants={mobileMenuVariant}
-                    className="fixed h-screen w-full flex flex-col items-center bg-white left-0 top-0 z-50"
+                    className="fixed h-screen lg:h-[60vh] w-full flex flex-col  bg-white left-0 top-0 z-50 lg:px-6"
                 >
                     <motion.button
                         variants={fadeInVariant}
@@ -137,7 +144,10 @@ export default function Navigation() {
                     >
                         close
                     </motion.button>
-                    <motion.ul variants={ulVariant}>
+                    <motion.ul
+                        variants={ulVariant}
+                        className="lg:font-bold w-full text-center"
+                    >
                         {navItems.map((item) => (
                             <Link
                                 key={item.id}
@@ -146,13 +156,15 @@ export default function Navigation() {
                             >
                                 <motion.li
                                     whileTap={{ scale: 0.95 }}
-                                    className="overflow-y-hidden select-none mx-0 my-5 hover:italic hover:cursor-pointer"
+                                    className="overflow-y-hidden select-none mx-0 my-5 hover:cursor-pointer"
                                 >
                                     <motion.div
                                         variants={liVariant}
-                                        className="text-center capitalize text-[34px]"
+                                        className="capitalize text-[34px]"
                                     >
-                                        {item.title}
+                                        <p className="text-center lg:text-left lg:text-9xl">
+                                            {item.title}
+                                        </p>
                                     </motion.div>
                                 </motion.li>
                             </Link>
