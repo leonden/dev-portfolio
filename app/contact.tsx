@@ -1,7 +1,9 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import Heading from "../components/heading"
 import c from "../content/en.json"
+import Paragraph from "@/components/paragraph"
 
 export default function Contact() {
     return (
@@ -17,17 +19,17 @@ export default function Contact() {
                 className="object-cover w-full h-full lg:h-fit absolute z-0 select-none"
             />
             <div className="flex flex-col gap-24 z-10">
-                <h2 className="text-6xl xl:text-9xl font-bold">
+                <Heading type="h2" className="text-6xl xl:text-9xl font-bold">
                     {c.pages.contact.title}
-                </h2>
-                <p className="text-4xl">
+                </Heading>
+                <Paragraph className="text-4xl">
                     {c.pages.contact.description}
                     <Link href={"#home"} className="underline">
                         <strong>
                             <i>I feel you</i>
                         </strong>
                     </Link>
-                </p>
+                </Paragraph>
                 <ul>
                     {c.socials.map((item, index) => (
                         <li key={index}>
