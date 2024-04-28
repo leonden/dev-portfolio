@@ -44,10 +44,12 @@ export default function Footer() {
                         className="md:w-28 md:h-28"
                     />
                 </div>
-                <p className="text-xl mt-4">
-                    {c.footer.copyright + currentYear}
-                </p>
-                <p className="text-xl mt-4">{c.footer.addition}</p>
+                <div className="max-w-[1200px] xl:mx-auto">
+                    <p className="text-xl mt-4">
+                        {c.footer.copyright + currentYear}
+                    </p>
+                    <p className="text-xl mt-4">{c.footer.addition}</p>
+                </div>
             </div>
         </footer>
     )
