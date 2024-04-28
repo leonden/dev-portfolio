@@ -1,5 +1,9 @@
+"use client"
 import Image from "next/image"
 import React from "react"
+import { motion } from "framer-motion"
+import Paragraph from "@/components/paragraph"
+import c from "@/content/en.json"
 
 export default function Home() {
     return (
@@ -12,10 +16,19 @@ export default function Home() {
                 className="object-cover w-full h-full lg:h-fit absolute z-0 select-none"
             />
             <div className="px-3 z-10">
-                <h1 className="text-6xl font-tostada max-w-4/5 2xl:text-8xl">
-                    The Art of Creating.
-                </h1>
-                <p>by Leon Hochwimmer</p>
+                <motion.h1
+                    className="text-6xl font-tostada max-w-4/5 2xl:text-8xl"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 3,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                >
+                    {c.title}.
+                </motion.h1>
+                <Paragraph>{c.subtitle}</Paragraph>
             </div>
         </section>
     )
