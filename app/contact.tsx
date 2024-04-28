@@ -20,10 +20,10 @@ export default function Contact() {
             />
             <div className="flex flex-col gap-24 z-10">
                 <Heading type="h2" className="text-6xl xl:text-9xl font-bold">
-                    {c.pages.contact.title}
+                    {c.content.contact.title}
                 </Heading>
                 <Paragraph className="text-4xl">
-                    {c.pages.contact.description}
+                    {c.content.contact.description}
                     <Link href={"#home"} className="underline">
                         <strong>
                             <i>I feel you</i>
