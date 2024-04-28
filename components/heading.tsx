@@ -3,7 +3,7 @@ import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
 type HeadingProps = {
-    children: React.ReactNode | string
+    children: string | React.ReactNode
     type: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
     className?: string
 }
@@ -15,7 +15,7 @@ export default function Heading({ children, type, className }: HeadingProps) {
 
     return (
         <HeadingComponent
-            className={className}
+            className={className ? className : "text-6xl xl:text-9xl font-bold"}
             style={{
                 transform: isInView ? "none" : "translateX(-200px)",
                 opacity: isInView ? 1 : 0,

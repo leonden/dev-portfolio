@@ -19,9 +19,7 @@ export default function Contact() {
                 className="object-cover w-full h-full lg:h-fit absolute z-0 select-none"
             />
             <div className="flex flex-col gap-24 z-10">
-                <Heading type="h2" className="text-6xl xl:text-9xl font-bold">
-                    {c.content.contact.title}
-                </Heading>
+                <Heading type="h2">{c.content.contact.title}</Heading>
                 <Paragraph className="text-4xl">
                     {c.content.contact.description}
                     <Link href={"#home"} className="underline">

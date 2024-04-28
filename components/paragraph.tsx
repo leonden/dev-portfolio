@@ -3,7 +3,7 @@ import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
 type ParagraphProps = {
-    children: React.ReactNode | string
+    children: string | React.ReactNode
     className?: string
 }
 

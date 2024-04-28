@@ -31,7 +31,40 @@
         },
         "about": {
             "title": "About",
-            "description": "Welcome to the about page!"
+            "me": {
+                "p1": "As a software developer with a passion for frontend development, I am constantly seeking out new technologies and approaches to improve my skills and enhance the user experience. With a curious and open mindset, I thrive on learning new things and taking on new challenges.",
+                "p2": "If you're looking for a dedicated and enthusiastic software developer who is committed to staying at the forefront of the latest technologies, then please don't hesitate to reach out to me. I look forward to connecting with you! "
+            },
+            "subtitle1": "Experience",
+            "experience": {
+                "cv": {
+                    "title": "Curriculum Vitae",
+                    "description": "If you are interested in my professional background, feel free to check out my CV."
+                },
+                "tools": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "TypeScript",
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Git",
+                    "GitHub",
+                    "Figma",
+                    "Photoshop",
+                    "Next.js",
+                    "Affinity Photo",
+                    "Affinity Designer",
+                    "Vue",
+                    "Angular",
+                    "Java",
+                    "Springboot",
+                    "Python",
+                    "SQL",
+                    "TailwindCSS"
+                ]
+            }
         },
         "work": {
             "title": "Work",

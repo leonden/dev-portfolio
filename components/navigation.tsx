@@ -131,7 +131,7 @@ export default function Navigation() {
             <motion.nav
                 initial="closed"
                 animate={navOpen ? "opened" : "closed"}
-                className="flex justify-between px-[45px] py-[35px] z-50 bg-white absolute"
+                className="flex justify-between px-[45px] py-[35px] z-50"
             >
                 <motion.div
                     variants={mobileMenuVariant}
