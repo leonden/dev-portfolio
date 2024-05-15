@@ -4,6 +4,7 @@ import Image from "next/image"
 import Heading from "../components/heading"
 import c from "../content/en.json"
 import Paragraph from "@/components/paragraph"
+import Anchor from "@/components/anchor"
 
 export default function Contact() {
     return (
@@ -22,18 +23,18 @@ export default function Contact() {
                 <Heading type="h2">{c.content.contact.title}</Heading>
                 <Paragraph className="text-4xl">
                     {c.content.contact.description}
-                    <Link href={"#home"} className="underline">
+                    <Anchor url="#home" type="inherit">
                         <strong>
                             <i>I feel you</i>
                         </strong>
-                    </Link>
+                    </Anchor>
                 </Paragraph>
                 <ul>
                     {c.socials.map((item, index) => (
-                        <li key={index}>
-                            <a href={item.url} className="text-4xl underline">
+                        <li key={index} className="text-4xl mb-4">
+                            <Anchor url={item.url} type="inherit">
                                 {item.title}
-                            </a>
+                            </Anchor>
                         </li>
                     ))}
                 </ul>
