@@ -1,0 +1,16 @@
+{
+    "short_name": "TAoC PWA",
+    "name": "The Art of Creating PWA",
+    "description": "A PWA of the website available at leonhochwimmer.com",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "128x128",
+            "type": "image/ico"
+        }
+    ]
+}
