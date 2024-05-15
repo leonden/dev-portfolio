@@ -1,16 +1,21 @@
 "use client"
-import React from "react"
-import { motion } from "framer-motion"
+import React, { useState } from "react"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 type AnchorProps = {
-    children: string
+    children: string | React.ReactNode
     url: string
 }
 
 export default function Anchor({ children, url }: AnchorProps) {
+    const [hovered, setHovered] = useState(false)
+
     return (
-        <span>
+        <span
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        >
             <Link
                 href={url}
                 className={
@@ -18,6 +23,12 @@ export default function Anchor({ children, url }: AnchorProps) {
                 }
             >
                 {children}
+                <div
+                    className={cn(
+                        "h-[1px] bg-gradient-to-r from-indigo-300 to-purple-400 transition-all duration-300 ease-in-out",
+                        hovered ? "w-full" : "w-0"
+                    )}
+                />
             </Link>
         </span>
     )
