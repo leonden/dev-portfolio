@@ -124,10 +124,8 @@ export default function Navigation() {
                 }}
                 variants={hideNavItemsVariant}
                 onClick={() => setNavOpen(true)}
-                className="text-lg hover:cursor-pointer fixed right-[45px] top-[35px] z-40 py-1 px-3 bg-white rounded-3xl shadow-md"
-            >
-                menu
-            </motion.button>
+                className="text-lg hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[45px] h-[45px] bg-black rounded-3xl shadow-md"
+            />
             <motion.nav
                 initial="closed"
                 animate={navOpen ? "opened" : "closed"}
@@ -140,7 +138,7 @@ export default function Navigation() {
                     <motion.button
                         variants={fadeInVariant}
                         onClick={() => setNavOpen(false)}
-                        className="self-end bg-transparent text-lg text-black ml-0 mr-[45px] mt-[35px] py-1 px-3 mb-0 border-[none] hover:cursor-pointer"
+                        className="self-end bg-transparent text-lg text-black ml-0 mr-[45px] mt-[45px] py-1 px-3 mb-0 border-[none] hover:cursor-pointer"
                     >
                         close
                     </motion.button>
