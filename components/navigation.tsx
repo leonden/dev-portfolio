@@ -149,14 +149,14 @@ export default function Navigation() {
                         className="lg:font-bold w-full text-center"
                     >
                         {navItems.map((item) => (
-                            <Link
+                            <motion.li
                                 key={item.id}
-                                href={item.url}
-                                onClick={() => setNavOpen(false)}
+                                whileTap={{ scale: 0.95 }}
+                                className="overflow-y-hidden select-none mx-0 my-5 hover:cursor-pointer"
                             >
-                                <motion.li
-                                    whileTap={{ scale: 0.95 }}
-                                    className="overflow-y-hidden select-none mx-0 my-5 hover:cursor-pointer"
+                                <Link
+                                    href={item.url}
+                                    onClick={() => setNavOpen(false)}
                                 >
                                     <motion.div
                                         variants={liVariant}
@@ -166,8 +166,8 @@ export default function Navigation() {
                                             {item.title}
                                         </p>
                                     </motion.div>
-                                </motion.li>
-                            </Link>
+                                </Link>
+                            </motion.li>
                         ))}
                     </motion.ul>
                 </motion.div>
