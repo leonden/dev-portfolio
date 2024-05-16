@@ -5,13 +5,11 @@ import Heading from "../components/heading"
 import c from "../content/en.json"
 import Paragraph from "@/components/paragraph"
 import Anchor from "@/components/anchor"
+import Section from "@/components/section"
 
 export default function Contact() {
     return (
-        <section
-            id="contact"
-            className="w-full h-screen px-3 grid place-items-center"
-        >
+        <Section id="contact" className="grid place-items-center">
             <Image
                 src={"/media/contact-gradient.svg"}
                 width={100}
@@ -30,6 +28,6 @@ export default function Contact() {
                     </Anchor>
                 </Paragraph>
             </div>
-        </section>
+        </Section>
     )
 }
