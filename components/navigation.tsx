@@ -125,6 +125,7 @@ export default function Navigation() {
                 variants={hideNavItemsVariant}
                 onClick={() => setNavOpen(true)}
                 className="text-lg hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[45px] h-[45px] bg-black rounded-3xl shadow-md"
+                value={"menu"}
             />
             <motion.nav
                 initial="closed"
