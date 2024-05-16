@@ -29,15 +29,6 @@ export default function Contact() {
                         </strong>
                     </Anchor>
                 </Paragraph>
-                <ul>
-                    {c.socials.map((item, index) => (
-                        <li key={index} className="text-4xl mb-4">
-                            <Anchor url={item.url} type="inherit">
-                                {item.title}
-                            </Anchor>
-                        </li>
-                    ))}
-                </ul>
             </div>
         </section>
     )
