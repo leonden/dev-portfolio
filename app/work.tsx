@@ -11,6 +11,7 @@ import {
 import c from "@/content/en.json"
 import Link from "next/link"
 import Image from "next/image"
+import Heading from "@/components/heading"
 
 export default function Work() {
     return (
@@ -18,6 +19,7 @@ export default function Work() {
             id="work"
             className="w-full h-screen flex flex-wrap gap-3 px-3"
         >
+            <Heading type="h3">{c.content.work.title}</Heading>
             {c.content.work.projects.map((item, index) => (
                 <Card key={index} className="w-[350px] max-h-[400px] relative">
                     <Image
@@ -39,6 +41,9 @@ export default function Work() {
                     </CardFooter>
                 </Card>
             ))}
+            <Link href={c.content.work.repos}>
+                <Button>See all</Button>
+            </Link>
         </section>
     )
 }

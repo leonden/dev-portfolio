@@ -67,8 +67,8 @@
             }
         },
         "work": {
-            "title": "Work",
-            "description": "Welcome to the work page!",
+            "title": "Sneek Peek Into My Projects.",
+            "repos": "https://github.com/leonden?tab=repositories",
             "projects": [
                 {
                     "title": "Portfolio",
