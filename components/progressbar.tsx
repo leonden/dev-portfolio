@@ -12,7 +12,7 @@ export default function ProgressBar() {
 
     return (
         <motion.div
-            className="translate-x-0 fixed bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-300 to-purple-400 origin-left"
+            className="translate-x-0 fixed bottom-0 left-0 right-0 h-1 z-40 bg-gradient-to-r from-indigo-300 to-purple-400 origin-left"
             style={{ scaleX }}
         />
     )
