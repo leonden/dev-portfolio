@@ -1,11 +1,12 @@
 import Heading from "@/components/heading"
 import Paragraph from "@/components/paragraph"
+import Section from "@/components/section"
 import c from "@/content/en.json"
 import React from "react"
 
 export default function About() {
     return (
-        <section id="about" className="w-full min-h-screen px-3">
+        <Section id="about">
             <Heading type="h2">{c.content.about.title}</Heading>
             <Paragraph className="text-4xl">{c.content.about.me.p1}</Paragraph>
             <Paragraph className="text-4xl">{c.content.about.me.p2}</Paragraph>
@@ -17,6 +18,6 @@ export default function About() {
                     <span key={index}>{tool}, </span>
                 ))}
             </Paragraph>
-        </section>
+        </Section>
     )
 }

@@ -124,13 +124,13 @@ export default function Navigation() {
                 }}
                 variants={hideNavItemsVariant}
                 onClick={() => setNavOpen(true)}
-                className="text-lg hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[45px] h-[45px] bg-black rounded-3xl shadow-md"
+                className="text-lg hover:cursor-pointer fixed bottom-[45px] mx-auto lg:bottom-auto lg:right-[45px] lg:top-[35px] z-40 w-[45px] h-[45px] bg-black rounded-3xl shadow-md"
                 value={"menu"}
             />
             <motion.nav
                 initial="closed"
                 animate={navOpen ? "opened" : "closed"}
-                className="flex justify-between px-[45px] py-[35px] z-50"
+                className="flex justify-between  z-50"
             >
                 <motion.div
                     variants={mobileMenuVariant}
