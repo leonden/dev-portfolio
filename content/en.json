@@ -71,22 +71,41 @@
             "description": "Welcome to the work page!",
             "projects": [
                 {
-                    "title": "Project 1",
-                    "description": "Description of project 1",
+                    "title": "Portfolio",
+                    "description": "The fourth iteration of my personal portfolio.",
+                    "technologies": [
+                        "Next.js",
+                        "TypeScript",
+                        "TailwindCSS",
+                        "Framer Motion",
+                        "Shadcn-UI"
+                    ],
                     "image": "/media/project1.jpg",
-                    "url": "https://www.google.com"
+                    "url": "https://www.github.com/leonden/portfolio"
                 },
                 {
-                    "title": "Project 2",
-                    "description": "Description of project 2",
+                    "title": "Watt Can I Save",
+                    "description": "An energy saving app developed during the 2022 Baselhack Hackaton which won the first prize.",
+                    "technologies": [
+                        "Angular",
+                        "TypeScript",
+                        "TailwindCSS",
+                        "DaisyUI"
+                    ],
                     "image": "/media/project2.jpg",
-                    "url": "https://www.google.com"
+                    "url": "https://www.github.com/leonden/watt-can-i-save"
                 },
                 {
-                    "title": "Project 3",
-                    "description": "Description of project 3",
-                    "image": "/media/project3.jpg",
-                    "url": "https://www.google.com"
+                    "title": "HAY (How Are You)",
+                    "description": "An app aiming for a better mental health by connecting people with similar interests. It was developed during the 2023 Baselhack Hackaton and won the second prize.",
+                    "technologies": [
+                        "Vue",
+                        "TypeScript",
+                        "TailwindCSS",
+                        "Nest.js"
+                    ],
+                    "image": "/media/project2.jpg",
+                    "url": "https://www.github.com/leonden/hay"
                 }
             ]
         },
