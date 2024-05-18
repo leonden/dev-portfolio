@@ -1,6 +1,6 @@
-import Heading from "@/components/heading"
-import Paragraph from "@/components/paragraph"
-import Section from "@/components/section"
+import Heading from "@/components/essential/heading"
+import Paragraph from "@/components/essential/paragraph"
+import Section from "@/components/essential/section"
 import c from "@/content/en.json"
 import React from "react"
 

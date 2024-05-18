@@ -2,7 +2,7 @@
 import Image from "next/image"
 import React from "react"
 import { motion } from "framer-motion"
-import Paragraph from "@/components/paragraph"
+import Paragraph from "@/components/essential/paragraph"
 import c from "@/content/en.json"
 
 export default function Home() {

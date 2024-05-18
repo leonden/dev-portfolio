@@ -11,8 +11,8 @@ import {
 import c from "@/content/en.json"
 import Link from "next/link"
 import Image from "next/image"
-import Heading from "@/components/heading"
-import Section from "@/components/section"
+import Heading from "@/components/essential/heading"
+import Section from "@/components/essential/section"
 
 export default function Work() {
     return (
