@@ -32,9 +32,9 @@ export default function Work() {
                         <CardDescription>{item.description}</CardDescription>
                     </CardHeader>
                     <CardContent>{item.image}</CardContent>
-                    <CardFooter className="flex justify-between">
+                    <CardFooter className="flex justify-between absolute bottom-0 right-0">
                         <Link href={item.url}>
-                            <Button>Visit on GitHub</Button>
+                            <Button>View on GitHub</Button>
                         </Link>
                     </CardFooter>
                 </Card>

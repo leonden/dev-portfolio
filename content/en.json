@@ -106,6 +106,18 @@
                     ],
                     "image": "/media/project2.jpg",
                     "url": "https://www.github.com/leonden/hay"
+                },
+                {
+                    "title": "Spring Is Coming",
+                    "description": "A weather app developed during a school assignement.",
+                    "technologies": [
+                        "Java",
+                        "Springboot",
+                        "JavaScript",
+                        "OpenWeatherMap API"
+                    ],
+                    "image": "/media/project2.jpg",
+                    "url": "https://www.github.com/leonden/spring-is-coming"
                 }
             ]
         },
