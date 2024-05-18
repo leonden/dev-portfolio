@@ -14,7 +14,7 @@ export default function Paragraph({ children, className }: ParagraphProps) {
     return (
         <motion.p
             className={className ? className : ""}
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{
                 duration: 1.5,
