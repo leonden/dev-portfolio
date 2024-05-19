@@ -4,7 +4,7 @@ import About from "./about"
 import Work from "./work"
 import Contact from "./contact"
 import Footer from "../components/footer"
-import Navigation from "../components/navigation"
+import Navigation from "../components/navigation/navigation"
 import ProgressBar from "../components/progressbar"
 
 export default function Page() {

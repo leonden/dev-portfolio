@@ -19,7 +19,10 @@ export default function Work() {
         <Section id="work" className="flex flex-wrap gap-3">
             <Heading type="h2">{c.content.work.title}</Heading>
             {c.content.work.projects.map((item, index) => (
-                <Card key={index} className="w-[350px] max-h-[400px] relative">
+                <Card
+                    key={index}
+                    className="w-[350px] min-h-[250px] max-h-[400px] relative"
+                >
                     <Image
                         src={item.image}
                         alt={item.title}
@@ -31,7 +34,6 @@ export default function Work() {
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>{item.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>{item.image}</CardContent>
                     <CardFooter className="flex justify-between absolute bottom-0 right-0">
                         <Link href={item.url}>
                             <Button>View on GitHub</Button>

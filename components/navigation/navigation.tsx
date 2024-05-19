@@ -2,115 +2,10 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import React, { SetStateAction, useState } from "react"
-
-const navItems = [
-    {
-        id: 0,
-        title: "home",
-        url: "#home",
-    },
-    {
-        id: 1,
-        title: "about",
-        url: "#about",
-    },
-    {
-        id: 2,
-        title: "work",
-        url: "#work",
-    },
-    {
-        id: 3,
-        title: "contact",
-        url: "#contact",
-    },
-]
-
-const hideNavItemsVariant = {
-    opened: {
-        opacity: 0,
-        y: "-100%",
-        transition: {
-            duration: 0.5,
-            ease: "easeInOut",
-        },
-    },
-    closed: {
-        opacity: 1,
-        y: "0%",
-        transition: {
-            delay: 1.1,
-            duration: 0.5,
-            ease: "easeInOut",
-        },
-    },
-}
+import * as cfg from "./config"
 
 export default function Navigation() {
     const [navOpen, setNavOpen] = useState(false)
-
-    const mobileMenuVariant = {
-        opened: {
-            y: "0%",
-            transition: {
-                delay: 0.15,
-                duration: 1.1,
-                ease: [0.74, 0, 0.19, 1.02],
-            },
-        },
-        closed: {
-            y: "-100%",
-            transition: {
-                delay: 0.35,
-                duration: 0.63,
-                ease: [0.74, 0, 0.19, 1.02],
-            },
-        },
-    }
-
-    const fadeInVariant = {
-        opened: {
-            opacity: 1,
-            transition: {
-                delay: 1.2,
-            },
-        },
-        closed: { opacity: 0 },
-    }
-
-    const ulVariant = {
-        opened: {
-            transition: {
-                delayChildren: 1,
-                staggerChildren: 0.18,
-            },
-        },
-        closed: {
-            transition: {
-                staggerChildren: 0.06,
-                staggerDirection: -1,
-            },
-        },
-    }
-
-    const liVariant = {
-        opened: {
-            opacity: 1,
-            y: "0%",
-            transition: {
-                duration: 0.65,
-                ease: "easeOut",
-            },
-        },
-        closed: {
-            opacity: 0,
-            y: "100%",
-            transition: {
-                duration: 0.25,
-                ease: "easeInOut",
-            },
-        },
-    }
 
     return (
         <>
@@ -122,21 +17,21 @@ export default function Navigation() {
                 className="flex justify-between  z-50"
             >
                 <motion.div
-                    variants={mobileMenuVariant}
+                    variants={cfg.mobileMenuVariant}
                     className="fixed h-screen lg:h-[60vh] w-full flex flex-col  bg-white left-0 top-0 z-50 lg:px-6"
                 >
                     <motion.button
-                        variants={fadeInVariant}
+                        variants={cfg.fadeInVariant}
                         onClick={() => setNavOpen(false)}
                         className="self-end bg-transparent text-lg text-black ml-0 mr-[45px] mt-[45px] py-1 px-3 mb-0 border-[none] hover:cursor-pointer"
                     >
                         close
                     </motion.button>
                     <motion.ul
-                        variants={ulVariant}
+                        variants={cfg.ulVariant}
                         className="lg:font-bold w-full text-center"
                     >
-                        {navItems.map((item) => (
+                        {cfg.navItems.map((item) => (
                             <motion.li
                                 key={item.id}
                                 whileTap={{ scale: 0.95 }}
@@ -147,7 +42,7 @@ export default function Navigation() {
                                     onClick={() => setNavOpen(false)}
                                 >
                                     <motion.div
-                                        variants={liVariant}
+                                        variants={cfg.liVariant}
                                         className="capitalize text-[34px]"
                                     >
                                         <p className="text-center lg:text-left lg:text-9xl">
@@ -178,7 +73,7 @@ function MobileNavButton({ setNavOpen }: NavButtonProps) {
                     stiffness: 200,
                     damping: 10,
                 }}
-                variants={hideNavItemsVariant}
+                variants={cfg.hideNavItemsVariant}
                 onClick={() => setNavOpen(true)}
                 className="hover:cursor-pointer mb-7 w-[55px] h-[55px] bg-transparent backdrop-invert rounded-full shadow-md"
             />
@@ -196,7 +91,7 @@ function NavButton({ setNavOpen }: NavButtonProps) {
                 stiffness: 200,
                 damping: 10,
             }}
-            variants={hideNavItemsVariant}
+            variants={cfg.hideNavItemsVariant}
             onClick={() => setNavOpen(true)}
             className="hidden lg:block hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[45px] h-[45px] bg-slate-500 rounded-3xl shadow-md"
         />
