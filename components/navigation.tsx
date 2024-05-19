@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import React, { useState } from "react"
+import React, { SetStateAction, useState } from "react"
 
 const navItems = [
     {
@@ -26,28 +26,28 @@ const navItems = [
     },
 ]
 
+const hideNavItemsVariant = {
+    opened: {
+        opacity: 0,
+        y: "-100%",
+        transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+        },
+    },
+    closed: {
+        opacity: 1,
+        y: "0%",
+        transition: {
+            delay: 1.1,
+            duration: 0.5,
+            ease: "easeInOut",
+        },
+    },
+}
+
 export default function Navigation() {
     const [navOpen, setNavOpen] = useState(false)
-
-    const hideNavItemsVariant = {
-        opened: {
-            opacity: 0,
-            y: "-100%",
-            transition: {
-                duration: 0.5,
-                ease: "easeInOut",
-            },
-        },
-        closed: {
-            opacity: 1,
-            y: "0%",
-            transition: {
-                delay: 1.1,
-                duration: 0.5,
-                ease: "easeInOut",
-            },
-        },
-    }
 
     const mobileMenuVariant = {
         opened: {
@@ -114,19 +114,8 @@ export default function Navigation() {
 
     return (
         <>
-            <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 10,
-                }}
-                variants={hideNavItemsVariant}
-                onClick={() => setNavOpen(true)}
-                className="text-lg hover:cursor-pointer fixed bottom-[45px] mx-auto lg:bottom-auto lg:right-[45px] lg:top-[35px] z-40 w-[45px] h-[45px] bg-black rounded-3xl shadow-md"
-                value={"menu"}
-            />
+            <MobileNavButton setNavOpen={setNavOpen} />
+            <NavButton setNavOpen={setNavOpen} />
             <motion.nav
                 initial="closed"
                 animate={navOpen ? "opened" : "closed"}
@@ -172,5 +161,44 @@ export default function Navigation() {
                 </motion.div>
             </motion.nav>
         </>
+    )
+}
+
+type NavButtonProps = {
+    setNavOpen: (value: SetStateAction<boolean>) => void
+}
+function MobileNavButton({ setNavOpen }: NavButtonProps) {
+    return (
+        <div className="lg:hidden fixed w-screen grid z-40  place-items-center bottom-0">
+            <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 10,
+                }}
+                variants={hideNavItemsVariant}
+                onClick={() => setNavOpen(true)}
+                className="hover:cursor-pointer mb-7 w-[55px] h-[55px] bg-transparent backdrop-invert rounded-full shadow-md"
+            />
+        </div>
+    )
+}
+
+function NavButton({ setNavOpen }: NavButtonProps) {
+    return (
+        <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 10,
+            }}
+            variants={hideNavItemsVariant}
+            onClick={() => setNavOpen(true)}
+            className="hidden lg:block hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[45px] h-[45px] bg-slate-500 rounded-3xl shadow-md"
+        />
     )
 }
