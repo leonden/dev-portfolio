@@ -2,6 +2,7 @@ import React from "react"
 import c from "../content/en.json"
 import Image from "next/image"
 import Link from "next/link"
+import Anchor from "./essential/anchor"
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -28,9 +29,12 @@ export default function Footer() {
                                             alt={c.socials[key].title}
                                             className="mr-3 w-12"
                                         />
-                                        <h4 className="text-2xl">
+                                        <Anchor
+                                            url={c.socials[key].url}
+                                            className="text-2xl"
+                                        >
                                             {c.socials[key].title}
-                                        </h4>
+                                        </Anchor>
                                     </Link>
                                 </li>
                             ))}

@@ -75,8 +75,11 @@ function MobileNavButton({ setNavOpen }: NavButtonProps) {
                 }}
                 variants={cfg.hideNavItemsVariant}
                 onClick={() => setNavOpen(true)}
-                className="hover:cursor-pointer mb-7 w-[55px] h-[55px] bg-[#00000050] backdrop-invert rounded-full shadow-md"
-            />
+                className="hover:cursor-pointer mb-7 w-[55px] h-[55px] bg-[#00000070] backdrop-invert rounded-full shadow-md"
+            >
+                <div className="w-1/2 h-[2px] bg-white my-2 mx-auto" />
+                <div className="w-1/2 h-[2px] bg-white my-2 mx-auto" />
+            </motion.button>
         </div>
     )
 }
@@ -93,7 +96,10 @@ function NavButton({ setNavOpen }: NavButtonProps) {
             }}
             variants={cfg.hideNavItemsVariant}
             onClick={() => setNavOpen(true)}
-            className="hidden lg:block hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[45px] h-[45px] bg-[#00000050] rounded-3xl shadow-md"
-        />
+            className="hidden lg:block hover:cursor-pointer fixed right-[45px] top-[35px] z-40 w-[55px] h-[55px] backdrop-invert bg-[#00000070] rounded-full shadow-md"
+        >
+            <div className="w-1/2 h-[2px] bg-white my-2 mx-auto" />
+            <div className="w-1/2 h-[2px] bg-white my-2 mx-auto" />
+        </motion.button>
     )
 }
