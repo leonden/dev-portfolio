@@ -28,7 +28,7 @@ export default function Card({ card, className }: CardProps) {
     return (
         <article
             className={
-                "rounded-md bg-white border-slate-500 border-spacing-1 w-full p-5 min-h-[350px]" +
+                "rounded-md bg-white border-slate-500 border-spacing-1 w-full p-5 min-h-[350px] max-w-[250px]" +
                 className
             }
         >
