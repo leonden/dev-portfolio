@@ -1,5 +1,5 @@
 import Heading from "@/components/essential/heading"
-import Paragraph from "@/components/essential/paragraph"
+import Paragraph from "@/components/essential/paragraph/paragraph"
 import Section from "@/components/essential/section"
 import c from "@/content/en.json"
 import React from "react"

@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import * as cfg from "./config"
 
 type ParagraphProps = {
     children: string | React.ReactNode
@@ -14,13 +15,9 @@ export default function Paragraph({ children, className }: ParagraphProps) {
     return (
         <motion.p
             className={className ? className : ""}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{
-                duration: 1.5,
-                delay: 0.5,
-                ease: [0, 0.71, 0.75, 1.01],
-            }}
+            initial={cfg.initial}
+            animate={inView ? cfg.animate : {}}
+            transition={cfg.transition}
             ref={ref}
         >
             {children}

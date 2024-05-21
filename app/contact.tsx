@@ -1,9 +1,8 @@
 import React from "react"
-import Link from "next/link"
 import Image from "next/image"
 import Heading from "../components/essential/heading"
 import c from "../content/en.json"
-import Paragraph from "@/components/essential/paragraph"
+import Paragraph from "@/components/essential/paragraph/paragraph"
 import Anchor from "@/components/essential/anchor"
 import Section from "@/components/essential/section"
 

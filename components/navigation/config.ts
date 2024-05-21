@@ -1,3 +1,5 @@
+// Configuartion for the navigation component.
+
 export const navItems = [
     {
         id: 0,
