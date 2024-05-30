@@ -71,7 +71,7 @@
             "repos": "https://github.com/leonden?tab=repositories",
             "projects": [
                 {
-                    "title": "Portfolio",
+                    "title": "The Art of Creating",
                     "description": "The fourth iteration of my personal portfolio.",
                     "technologies": [
                         "Next.js",
@@ -85,13 +85,14 @@
                 },
                 {
                     "title": "Watt Can I Save",
-                    "description": "An energy saving app developed during the 2022 Baselhack Hackaton which won the first prize.",
+                    "description": "An energy saving app developed during the 2022 BaselHack Hackaton which won the first prize.",
                     "technologies": [
                         "Angular",
                         "TypeScript",
                         "TailwindCSS",
                         "DaisyUI"
                     ],
+                    "tags": ["BaselHack"],
                     "image": "/media/project2.jpg",
                     "url": "https://www.github.com/leonden/watt-can-i-save"
                 },
@@ -104,6 +105,7 @@
                         "TailwindCSS",
                         "Nest.js"
                     ],
+                    "tags": ["BaselHack"],
                     "image": "/media/project2.jpg",
                     "url": "https://www.github.com/leonden/hay"
                 },

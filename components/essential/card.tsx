@@ -2,12 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import Button from "./button/button"
+import Tag from "../tag"
 
 type CardProps = {
     card: {
         title: string
         description: string
-        image: string
+        tags?: string[]
         button?: { content: string; ref: string }
     }
     className?: string
@@ -28,23 +29,29 @@ export default function Card({ card, className }: CardProps) {
     return (
         <article
             className={
-                "rounded-md bg-white border-slate-500 border-spacing-1 w-full p-5 min-h-[350px] max-w-[250px]" +
+                "w-full rounded-md bg-white border border-slate-200 border-spacing-1 p-5 h-[400px] sm:w-[300px] relative " +
                 className
             }
         >
-            {/*card.image && (
-                <Image
-                    src={card.image}
-                    alt={card.title}
-                    width={250}
-                    height={350}
-                />
-            )*/}
             <h4 className="font-bold text-2xl">{card.title}</h4>
             <p>{card.description}</p>
+
+            {card.tags && (
+                <div className="max-w-[200px] flex-wrap flex gap-1">
+                    {card.tags.map((tag, index) => (
+                        <Tag variant="primary" key={index}>
+                            {tag}
+                        </Tag>
+                    ))}
+                </div>
+            )}
+
             {card.button && (
                 <Link href={card.button.ref}>
-                    <Button variant="primary" className="mt-5 float-end">
+                    <Button
+                        variant="primary"
+                        className="mt-5 absolute bottom-5 right-5"
+                    >
                         View on GitHub
                     </Button>
                 </Link>
