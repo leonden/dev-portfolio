@@ -4,7 +4,8 @@
     "description": "Portfolio",
     "footer": {
         "copyright": "Copyright © ",
-        "addition": "Designed and developed by Leon Hochwimmer",
+        "p1": "Designed and developed by Leon Hochwimmer",
+        "p2": "Implemented using Next.js 14",
         "slogan": "Don't just tell, show."
     },
     "socials": [
@@ -44,6 +45,7 @@
                 "tools": [
                     "HTML",
                     "CSS",
+                    "Sass",
                     "JavaScript",
                     "TypeScript",
                     "React",
@@ -62,7 +64,11 @@
                     "Springboot",
                     "Python",
                     "SQL",
-                    "TailwindCSS"
+                    "TailwindCSS",
+                    "DaisyUI",
+                    "Shadcn-UI",
+                    "Framer Motion",
+                    "Supabase"
                 ]
             }
         },

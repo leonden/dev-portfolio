@@ -1,6 +1,7 @@
 import Heading from "@/components/essential/heading"
 import Paragraph from "@/components/essential/paragraph/paragraph"
 import Section from "@/components/essential/section"
+import Tag from "@/components/tag/tag"
 import c from "@/content/en.json"
 import React from "react"
 
@@ -13,9 +14,11 @@ export default function About() {
             <Heading type="h3" className="text-5xl xl:text-8xl font-bold">
                 {c.content.about.subtitle1}
             </Heading>
-            <Paragraph className="text-4xl">
+            <Paragraph className="text-4xl flex flex-wrap gap-2">
                 {c.content.about.experience.tools.map((tool, index) => (
-                    <span key={index}>{tool}, </span>
+                    <Tag variant="primary" size="lg" key={index}>
+                        {tool}
+                    </Tag>
                 ))}
             </Paragraph>
         </Section>

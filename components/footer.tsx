@@ -52,7 +52,8 @@ export default function Footer() {
                     <p className="text-xl mt-4">
                         {c.footer.copyright + currentYear}
                     </p>
-                    <p className="text-xl mt-4">{c.footer.addition}</p>
+                    <p className="text-xl mt-4">{c.footer.p1}</p>
+                    <p className="text-xl mt-4">{c.footer.p2}</p>
                 </div>
             </div>
         </footer>

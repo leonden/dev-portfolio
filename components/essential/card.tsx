@@ -1,8 +1,7 @@
-import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import Button from "./button/button"
-import Tag from "../tag"
+import Tag from "../tag/tag"
 import { cn } from "@/lib/utils"
 
 type CardProps = {
@@ -40,7 +39,7 @@ export default function Card({ card, className }: CardProps) {
             {card.tags && (
                 <div className="max-w-[200px] flex-wrap flex gap-1">
                     {card.tags.map((tag, index) => (
-                        <Tag variant="primary" key={index}>
+                        <Tag variant="primary" size="sm" key={index}>
                             {tag}
                         </Tag>
                     ))}
