@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import React, { SetStateAction, useState } from "react"
 import * as cfg from "./config"
+import "./config.css"
 
 export default function Navigation() {
     const [navOpen, setNavOpen] = useState(false)
@@ -14,11 +15,11 @@ export default function Navigation() {
             <motion.nav
                 initial="closed"
                 animate={navOpen ? "opened" : "closed"}
-                className="flex justify-between z-50 shadow-md"
+                className="flex justify-between z-50"
             >
                 <motion.div
                     variants={cfg.mobileMenuVariant}
-                    className="fixed h-screen lg:h-[60vh] w-full flex flex-col  bg-white left-0 top-0 z-50 lg:px-6"
+                    className="fixed h-screen shadow-md lg:h-[60vh] w-full flex flex-col  bg-white left-0 top-0 z-50 lg:px-6"
                 >
                     <motion.button
                         variants={cfg.fadeInVariant}
@@ -45,7 +46,7 @@ export default function Navigation() {
                                         variants={cfg.liVariant}
                                         className="capitalize text-[34px]"
                                     >
-                                        <p className="text-center lg:text-left lg:text-9xl">
+                                        <p className="text-center lg:text-left lg:text-9xl lg:pl-5 nav-item">
                                             {item.title}
                                         </p>
                                     </motion.div>

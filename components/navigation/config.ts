@@ -26,7 +26,7 @@ export const navItems = [
 export const hideNavItemsVariant = {
     opened: {
         opacity: 0,
-        y: "-100%",
+        y: "-150%",
         transition: {
             duration: 0.5,
             ease: "easeInOut",
@@ -52,7 +52,7 @@ export const mobileMenuVariant = {
         },
     },
     closed: {
-        y: "-100%",
+        y: "-150%",
         transition: {
             delay: 0.35,
             duration: 0.63,
@@ -97,7 +97,7 @@ export const liVariant = {
     },
     closed: {
         opacity: 0,
-        y: "100%",
+        y: "150%",
         transition: {
             duration: 0.25,
             ease: "easeInOut",
