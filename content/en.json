@@ -73,7 +73,7 @@
             "projects": [
                 {
                     "title": "The Art of Creating",
-                    "description": "The fourth iteration of my personal portfolio.",
+                    "description": "The fourth iteration of my personal portfolio. With an artistic and minimalistic thought in the back of my head, I created this portfolio to showcase my work and skills as a software developer.",
                     "technologies": [
                         "Next.js",
                         "TypeScript",
