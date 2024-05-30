@@ -12,20 +12,25 @@ import {
     CarouselPrevious,
     CarouselNext,
 } from "@/components/ui/carousel"
+import Paragraph from "@/components/essential/paragraph/paragraph"
 
 export default function Work() {
     return (
         <Section id="work" className="flex flex-wrap gap-3">
             <Heading type="h2">{c.content.work.title}</Heading>
+            <Paragraph className="text-4xl">
+                {c.content.work.description}
+            </Paragraph>
 
             <Carousel
-                className="overflow-hidden"
+                className="overflow-hidden relative"
                 opts={{
                     align: "start",
                     skipSnaps: true,
                     dragFree: false,
                 }}
             >
+                <CarouselPrevious />
                 <CarouselContent>
                     {c.content.work.projects.map((item, index) => (
                         <CarouselItem
@@ -46,11 +51,11 @@ export default function Work() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious />
+                <div className="hidden sm:block w-[100px] absolute right-0 top-0 h-full bg-gradient-to-l from-white to-transparent origin-right" />
                 <CarouselNext />
             </Carousel>
 
-            <div className="w-full grid place-items-center">
+            <div className="w-full grid place-items-center mt-10">
                 <Link href={c.content.work.repos}>
                     <Button variant="primary">See all</Button>
                 </Link>

@@ -3,6 +3,7 @@ import Link from "next/link"
 import React from "react"
 import Button from "./button/button"
 import Tag from "../tag"
+import { cn } from "@/lib/utils"
 
 type CardProps = {
     card: {
@@ -28,10 +29,10 @@ type CardProps = {
 export default function Card({ card, className }: CardProps) {
     return (
         <article
-            className={
-                "w-full rounded-md bg-white border border-slate-200 border-spacing-1 p-5 h-[400px] sm:w-[300px] relative " +
+            className={cn(
+                "w-full rounded-md bg-white border border-slate-200 border-spacing-1 p-5 h-[400px] sm:w-[300px] relative",
                 className
-            }
+            )}
         >
             <h4 className="font-bold text-2xl">{card.title}</h4>
             <p>{card.description}</p>

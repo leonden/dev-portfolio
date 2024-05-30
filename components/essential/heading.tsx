@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import { cn } from "@/lib/utils"
 
 type HeadingProps = {
     children: string | React.ReactNode
@@ -15,7 +16,7 @@ export default function Heading({ children, type, className }: HeadingProps) {
 
     return (
         <HeadingComponent
-            className={className ? className : "text-6xl xl:text-9xl font-bold"}
+            className={cn("text-6xl xl:text-9xl font-bold", className)}
             style={{
                 transform: isInView ? "none" : "translateX(-50px)",
                 opacity: isInView ? 1 : 0,

@@ -68,6 +68,7 @@
         },
         "work": {
             "title": "Sneek Peek Into My Projects.",
+            "description": "These are some of the projects I have worked on or contributed to.",
             "repos": "https://github.com/leonden?tab=repositories",
             "projects": [
                 {
@@ -120,6 +121,13 @@
                     ],
                     "image": "/media/project2.jpg",
                     "url": "https://www.github.com/leonden/spring-is-coming"
+                },
+                {
+                    "title": "Cumulus by NASA",
+                    "description": "Cumulus is an ESDIS Project effort to prototype and test how EOSDIS data collections can be archived collectively and disseminated in the commercial cloud.",
+                    "technologies": ["JavaScript", "Node.js"],
+                    "image": "/media/project2.jpg",
+                    "url": "https://www.github.com/nasa/cumulus"
                 }
             ]
         },
