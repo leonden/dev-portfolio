@@ -17,10 +17,10 @@ export default function Page() {
             <Home />
             <div className="mt-10 mb-32">
                 <ParallaxText baseVelocity={-1}>
-                    Developer - Engineer - Pragmatist
+                    Developer - Engineer - Pragmatist -
                 </ParallaxText>
                 <ParallaxText baseVelocity={1}>
-                    Photographer - Open Mind - Creativehead
+                    Photographer - Open Mind - Creativehead -
                 </ParallaxText>
             </div>
             <div className="max-w-[1200px] xl:mx-auto">
