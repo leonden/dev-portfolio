@@ -64,6 +64,8 @@
                     "Springboot",
                     "Python",
                     "SQL",
+                    "NoSQL",
+                    "PHP",
                     "TailwindCSS",
                     "DaisyUI",
                     "Shadcn-UI",
@@ -130,7 +132,7 @@
                 },
                 {
                     "title": "Open MCT by NASA",
-                    "description": "Open MCT (Open Mission Control Technologies) is a next-generation mission control framework for visualization of data on desktop and mobile devices. It is developed at NASA's Ames Research Center, and is being used by NASA for data analysis of spacecraft missions.",
+                    "description": "Open MCT (Open Mission Control Technologies) is a next-generation mission control framework for visualization of data on desktop and mobile devices.",
                     "technologies": ["Vue", "JavaScript", "Node.js"],
                     "image": "/media/project2.jpg",
                     "url": "https://www.github.com/nasa/openmct"

@@ -34,7 +34,7 @@ export default function Card({ card, className }: CardProps) {
             )}
         >
             <h4 className="font-bold text-2xl">{card.title}</h4>
-            <p className="my-4 leading-5">{card.description}</p>
+            <p className="my-4 leading-5 text-lg">{card.description}</p>
 
             {card.tags && (
                 <div className="max-w-[200px] flex-wrap flex gap-1">
