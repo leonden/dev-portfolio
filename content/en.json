@@ -123,6 +123,13 @@
                     "url": "https://www.github.com/leonden/spring-is-coming"
                 },
                 {
+                    "title": "Open MCT by NASA",
+                    "description": "Open MCT (Open Mission Control Technologies) is a next-generation mission control framework for visualization of data on desktop and mobile devices. It is developed at NASA's Ames Research Center, and is being used by NASA for data analysis of spacecraft missions.",
+                    "technologies": ["Vue", "JavaScript", "Node.js"],
+                    "image": "/media/project2.jpg",
+                    "url": "https://www.github.com/nasa/openmct"
+                },
+                {
                     "title": "Cumulus by NASA",
                     "description": "Cumulus is an ESDIS Project effort to prototype and test how EOSDIS data collections can be archived collectively and disseminated in the commercial cloud.",
                     "technologies": ["JavaScript", "Node.js"],

@@ -15,7 +15,7 @@ export default function Paragraph({ children, className }: ParagraphProps) {
 
     return (
         <motion.p
-            className={cn("mt-5", className)}
+            className={cn("mt-4 mb-8", className)}
             initial={cfg.initial}
             animate={inView ? cfg.animate : {}}
             transition={cfg.transition}
