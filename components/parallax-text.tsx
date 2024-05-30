@@ -67,7 +67,7 @@ export default function ParallaxText({
     return (
         <div className="overflow-hidden m-0 whitespace-nowrap flex flex-no-wrap leading-[0.8] tracking-[-2px]">
             <motion.div
-                className="font-mentra font-semibold uppercase text-6xl flex whitespace-nowrap flex-no-wrap"
+                className="font-tostada uppercase text-6xl flex whitespace-nowrap flex-no-wrap"
                 style={{ x }}
             >
                 <span className="block mr-[30px]">{children} </span>
