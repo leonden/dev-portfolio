@@ -53,7 +53,10 @@ export default function Footer() {
                         {c.footer.copyright + currentYear}
                     </p>
                     <p className="text-xl mt-4">{c.footer.p1}</p>
-                    <p className="text-xl mt-4">{c.footer.p2}</p>
+                    <p className="text-xl mt-4">
+                        {c.footer.p2}{" "}
+                        <Anchor url="https://nextjs.org/">Next.js 14</Anchor>
+                    </p>
                 </div>
             </div>
         </footer>
