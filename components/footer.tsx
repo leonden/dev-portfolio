@@ -54,7 +54,13 @@ export default function Footer() {
                     </p>
                     <p className="text-xl mt-4">{c.footer.p1}</p>
                     <p className="text-xl mt-4">
-                        {c.footer.p2}{" "}
+                        {c.footer.p2}
+                        <Anchor url="https://leonhochwimmer.com/">
+                            leonhochwimmer.com
+                        </Anchor>
+                    </p>
+                    <p className="text-xl mt-4">
+                        {c.footer.p3}
                         <Anchor url="https://nextjs.org/">Next.js 14</Anchor>
                     </p>
                 </div>
