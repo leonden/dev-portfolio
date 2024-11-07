@@ -97,7 +97,7 @@
                     "title": "Anilog",
                     "description": "Anilog is a web app that encourages nature exploration by rewarding users for discovering new plant and animal species. Other than Pokemon GO, users focus on their natural environment rather than the screen.",
                     "technologies": [
-                        "React.js",
+                        "React",
                         "TypeScript",
                         "TanStack",
                         "Shadcn"
