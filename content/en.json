@@ -94,6 +94,19 @@
                     "url": "https://www.github.com/leonden/portfolio"
                 },
                 {
+                    "title": "Anilog",
+                    "description": "Anilog is a web app that encourages nature exploration by rewarding users for discovering new plant and animal species. Users can earn points for their discoveries. Similar to Pokémon GO in encouraging outdoor activity, Anilog differs in that it focuses attention on the natural world rather than the screen.",
+                    "technologies": [
+                        "React.js",
+                        "TypeScript",
+                        "TanStack",
+                        "Shadcn"
+                    ],
+                    "tags": ["BaselHack"],
+                    "image": "/media/project2.jpg",
+                    "url": "https://www.github.com/leonden/anilog"
+                },
+                {
                     "title": "Watt Can I Save",
                     "description": "An energy saving app developed during the 2022 BaselHack Hackaton which won the first prize.",
                     "technologies": [
