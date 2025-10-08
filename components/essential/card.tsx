@@ -5,13 +5,13 @@ import Tag from "../tag/tag"
 import { cn } from "@/lib/utils"
 
 type CardProps = {
-    card: {
-        title: string
-        description: string
-        tags?: string[]
-        button?: { content: string; ref: string }
-    }
-    className?: string
+  card: {
+    title: string
+    description: string
+    tags?: string[]
+    button?: { content: string; ref: string }
+  }
+  className?: string
 }
 
 /**
@@ -26,36 +26,33 @@ type CardProps = {
  * @returns {React.ReactElement} The card component.
  */
 export default function Card({ card, className }: CardProps) {
-    return (
-        <article
-            className={cn(
-                "w-full rounded-md bg-white border border-slate-200 border-spacing-1 p-5 h-[400px] sm:w-[300px] relative",
-                className
-            )}
-        >
-            <h4 className="font-bold text-2xl">{card.title}</h4>
-            <p className="my-4 leading-5 text-lg">{card.description}</p>
+  return (
+    <article
+      className={cn(
+        "w-full rounded-md bg-white border border-slate-200 border-spacing-1 p-5 h-[400px] sm:w-[300px] relative",
+        className
+      )}
+    >
+      <h4 className="font-bold text-2xl">{card.title}</h4>
+      <p className="my-4 leading-5 text-lg">{card.description}</p>
 
-            {card.tags && (
-                <div className="max-w-[200px] flex-wrap flex gap-1">
-                    {card.tags.map((tag, index) => (
-                        <Tag variant="primary" size="sm" key={index}>
-                            {tag}
-                        </Tag>
-                    ))}
-                </div>
-            )}
+      {card.tags && (
+        <div className="max-w-[200px] flex-wrap flex gap-1">
+          {card.tags.map((tag, index) => (
+            <Tag variant="primary" size="sm" key={index}>
+              {tag}
+            </Tag>
+          ))}
+        </div>
+      )}
 
-            {card.button && (
-                <Link href={card.button.ref}>
-                    <Button
-                        variant="primary"
-                        className="mt-5 absolute bottom-5 right-5"
-                    >
-                        View on GitHub
-                    </Button>
-                </Link>
-            )}
-        </article>
-    )
+      {card.button && (
+        <Link href={card.button.ref}>
+          <Button variant="primary" className="mt-5 absolute bottom-5 right-5">
+            View on GitHub
+          </Button>
+        </Link>
+      )}
+    </article>
+  )
 }

@@ -1,4 +1,4 @@
-// Configuartion for the tag component.
+// Configuration for the tag component.
 
 export const hover = { scale: 1.025 }
 

@@ -6,21 +6,21 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-    manifest: "/manifest.json",
-    title: c.title,
-    description: c.description,
+  manifest: "/manifest.json",
+  title: c.title,
+  description: c.description,
 }
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode
+  children: React.ReactNode
 }>) {
-    return (
-        <html lang="en" className="scroll-smooth">
-            <body className="font-rota">{children}</body>
-            <Analytics />
-            <SpeedInsights />
-        </html>
-    )
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className="font-rota">{children}</body>
+      <Analytics />
+      <SpeedInsights />
+    </html>
+  )
 }
