@@ -18,7 +18,7 @@ export default function Page() {
       <div className="mt-10 mb-40 md:mb-60 lg:mb-80">
         <CurvedLoop
           marqueeText="Problem Solver ✦ Creative Head ✦ Pragmatist ✦ Open Mind ✦ Team Player"
-          speed={1.5}
+          speed={2}
           curveAmount={400}
           interactive={true}
           className="text-[12rem] md:text-8xl"
