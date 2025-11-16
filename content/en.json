@@ -117,6 +117,14 @@
           "url": "https://www.github.com/leonden/hay"
         },
         {
+          "title": "Catch me if you can",
+          "description": "Bringing joy to people, by playing games that trigger the nostalgia of our childhood — like cops and robbers.",
+          "technologies": ["Nuxt", "TypeScript", "TailwindCSS", "MQTT"],
+          "tags": ["BaselHack"],
+          "image": "/media/project2.jpg",
+          "url": "https://github.com/leonden/catch-me-if-you-can"
+        },
+        {
           "title": "Spring Is Coming",
           "description": "A weather app developed during a school assignement.",
           "technologies": [
