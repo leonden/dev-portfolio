@@ -96,11 +96,18 @@
           "url": "https://www.github.com/leonden/dev-portfolio"
         },
         {
+          "title": "Auvid",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "technologies": ["Vite", "TypeScript", "WebGL"],
+          "image": "/work/auvid.png",
+          "url": "https://www.github.com/leonden/auvid"
+        },
+        {
           "title": "Anilog",
           "description": "Anilog is a web app that encourages nature exploration by rewarding users for discovering new plant and animal species. Other than Pokemon GO, users focus on their natural environment rather than the screen.",
           "technologies": ["React", "TypeScript", "TanStack", "Shadcn"],
           "tags": ["BaselHack"],
-          "image": "/media/project2.jpg",
+          "image": "/work/anilog.png",
           "url": "https://www.github.com/leonden/anilog"
         },
         {
@@ -116,7 +123,7 @@
           "description": "An app aiming for a better mental health by connecting people with similar interests. It was developed during the 2023 Baselhack Hackaton and won the second prize.",
           "technologies": ["Vue", "TypeScript", "TailwindCSS", "Nest.js"],
           "tags": ["BaselHack"],
-          "image": "/media/project2.jpg",
+          "image": "/work/hay.png",
           "url": "https://www.github.com/leonden/hay"
         },
         {
@@ -126,18 +133,6 @@
           "tags": ["BaselHack"],
           "image": "/media/project2.jpg",
           "url": "https://github.com/leonden/catch-me-if-you-can"
-        },
-        {
-          "title": "Spring Is Coming",
-          "description": "A weather app developed during a school assignement.",
-          "technologies": [
-            "Java",
-            "Springboot",
-            "JavaScript",
-            "OpenWeatherMap API"
-          ],
-          "image": "/media/project2.jpg",
-          "url": "https://www.github.com/leonden/spring-is-coming"
         },
         {
           "title": "Open MCT by NASA",

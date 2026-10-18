@@ -257,7 +257,7 @@ const STYLE = `
 const FIT_ASPECT: Record<string, number> = {
   portrait: 0.75,
   square: 1,
-  landscape: 4 / 3,
+  landscape: 16 / 9,
 }
 const TAPS = 12
 const PIXEL_BUDGET = 4.5e6
