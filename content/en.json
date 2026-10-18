@@ -4,9 +4,15 @@
   "description": "Portfolio",
   "footer": {
     "copyright": "Copyright © ",
+    "circular": "Art*Life*Film*Music*Photo*",
     "p1": "Designed and developed by Leon Hochwimmer",
     "p2": "If you want to know about my photography, check out ",
     "slogan": "Don't just tell, show."
+  },
+  "notFound": {
+    "title": "404",
+    "description": "These are not the droids you are looking for.",
+    "button": "Go back to home"
   },
   "socials": [
     {
@@ -26,10 +32,7 @@
     }
   ],
   "content": {
-    "home": {
-      "title": "Home",
-      "description": "Welcome to the home page!"
-    },
+    "home": { "title": "Home", "description": "Welcome to the home page!" },
     "about": {
       "title": "About",
       "me": {

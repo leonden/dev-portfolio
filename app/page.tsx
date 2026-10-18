@@ -1,38 +1,19 @@
-import React from "react"
-import Home from "./home"
-import About from "./about"
-import Work from "./work"
-import Contact from "./contact"
-import Footer from "../components/footer"
-import Navigation from "../components/navigation/navigation"
-import ProgressBar from "../components/progressbar"
-import CurvedLoop from "@/components/custom/curved-loop"
-import Cursor from "@/components/cursor"
+import Footer from "./footer"
+import About from "../components/pages/about"
+import Work from "../components/pages/work"
+import Contact from "../components/pages/contact"
+import Home from "../components/pages/home"
 
-export default function Page() {
+export default function HomePage() {
   return (
     <>
-      {/* {<Cursor />} */}
-      <Navigation />
-      <Home />
-      <div className="mt-10 mb-40 md:mb-60 lg:mb-80">
-        <CurvedLoop
-          marqueeText="Problem Solver ✦ Creative Head ✦ Pragmatist ✦ Open Mind ✦ Team Player"
-          speed={2}
-          curveAmount={400}
-          interactive={true}
-          className="text-[12rem] md:text-8xl"
-        />
-      </div>
-      <div className="max-w-[1200px] xl:mx-auto">
-        <main>
-          <About />
-          <Work />
-          <Contact />
-        </main>
-      </div>
+      <main className="max-w-[1200px] xl:mx-auto">
+        <Home />
+        <About />
+        <Work />
+        <Contact />
+      </main>
       <Footer />
-      <ProgressBar />
     </>
   )
 }
