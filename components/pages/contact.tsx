@@ -1,9 +1,10 @@
 import Section from "@/components/core/section"
+import Heading from "../core/heading"
 
 export default function Contact() {
   return (
     <Section id="contact">
-      <div>Contact</div>
+      <Heading type="h2">Contact</Heading>
     </Section>
   )
 }

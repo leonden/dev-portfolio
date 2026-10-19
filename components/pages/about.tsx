@@ -1,11 +1,12 @@
 import Section from "@/components/core/section"
 import Image from "next/image"
 import DitherVeil from "../creative/dither-veil"
+import Heading from "../core/heading"
 
 export default function About() {
   return (
     <Section id="about">
-      <div>About</div>
+      <Heading type="h2">About</Heading>
       <DitherVeil
         src="/DSCF3136-2.jpg"
         pattern="floyd"

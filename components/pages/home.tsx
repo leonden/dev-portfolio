@@ -1,5 +1,6 @@
 import Section from "@/components/core/section"
 import GradientASCII from "../creative/gradient-ascii"
+import Heading from "../core/heading"
 
 export default function Home() {
   return (
@@ -29,8 +30,11 @@ export default function Home() {
         clickEffect="wave"
         intro
         lightMode={false}
+        className="z-0"
       />
-      <div>Home</div>
+      <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <Heading type="h1">Home</Heading>
+      </div>
     </section>
   )
 }
