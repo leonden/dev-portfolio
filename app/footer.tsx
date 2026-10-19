@@ -1,8 +1,13 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import CircularText from "@/components/text/circular-text"
 import c from "@/content/en.json"
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const [currentYear, setCurrentYear] = useState<number | null>(null)
+
+  useEffect(() => setCurrentYear(new Date().getFullYear()), [])
 
   return (
     <footer className="rounded-tl-3xl rounded-tr-3xl w-full min-h-[50vh] bg-black text-white relative p-5 flex flex-col overflow-hidden">
