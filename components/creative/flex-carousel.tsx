@@ -1256,11 +1256,17 @@ const FlexCarousel = ({
         const inner = Math.max(4, s.reach * (spanW + spanH) * 0.5)
         lensUniforms.uInner.value = inner
         lensUniforms.uOuter.value = inner * 1.6
-        lensUniforms.uFlow.value = s.bend * (spanW + spanH) * 0.45
+        // Scale down warp when a single card fills most of the viewport (mobile).
+        // The active card occupying >45% of width means side cards are barely visible,
+        // so the warp meant for card edges hits the centered card instead.
+        const activeW = m.widths[activeIndex >= 0 ? activeIndex : 0] ?? m.cardH
+        const cardFillRatio = activeW / Math.max(width, 1)
+        const bendScale = 1 - clamp01((cardFillRatio - 0.45) / 0.45)
+        lensUniforms.uFlow.value = s.bend * (spanW + spanH) * 0.45 * bendScale
         lensUniforms.uCurl.value =
           s.curl === "rise" ? 1 : s.curl === "fall" ? -1 : 0
         lensUniforms.uDispersion.value =
-          s.dispersion * 0.12 * (1 + Math.abs(deform) * liquidAmount * 1.2)
+          s.dispersion * 0.12 * (1 + Math.abs(deform) * liquidAmount * 1.2) * bendScale
         lensUniforms.uStrength.value = effects.strength * (1 - focusEase)
         lensUniforms.uSceneAlpha.value = effects.sceneAlpha
         renderer.render({ scene: lensMesh })
